@@ -2,13 +2,16 @@ package stepdefinitions;
 import io.cucumber.java.en.Given;
 import java.sql.*;
 public class HMC_db_Stepdefinitions {
+
     String url="jdbc:sqlserver://184.168.194.58:1433;databaseName=hotelmycamp ; " +
             "user=techproed;password=P2s@rt65";
     String username="techproed";
     String password="P2s@rt65";
-    Connection connection;
-    Statement statement;
-    ResultSet resultSet;
+
+    Connection connection;// database bağlanmamızı sağlıyor
+    Statement statement;  //Query çalıştırmamızı sağlıyor
+    ResultSet resultSet;  // Ouery sonucunda dönen sonucu store etmemize yarıyor
+
     @Given("kullanici HMC veri tabanina baglanir")
     public void kullanici_hmc_veri_tabanina_baglanir() throws SQLException {
         connection= DriverManager.getConnection(url,username,password);
@@ -25,14 +28,18 @@ public class HMC_db_Stepdefinitions {
         //
         resultSet.first();
         System.out.println(resultSet.getString("Price"));// 225.0000
+
         resultSet.next(); // iterator'a benzer sekilde calisir
         // next()'u imleci bir sonraki degerin yanina goturur
         // bize true veya false doner
+
         System.out.println(resultSet.getString("Price")); // 4000.0000
         System.out.println(resultSet.next()); // true
         System.out.println(resultSet.getString("Price")); // 445.0000
+
         // next() kullanilirken cok dikkatli olmaliyiz
         // cunku nerede olursa olsun imleci bir sonraki elemente gecirecektir.
+
         System.out.println("===============Liste===============");
         resultSet.absolute(0);
         int sira=1;

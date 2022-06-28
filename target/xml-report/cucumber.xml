@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="4.389">
-    <testcase classname="US1001 kullanici dogru bilgilerle database baglanabilmeli" name="TC01 Kullanici database'deki bilgileri okur" time="4.083">
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="2.772">
+    <testcase classname="US1002 kullanıcı DB Utilis ile database bağlantısı yapabilir" name="TC02 kullanıcı Db Utilis ile database'deki bilgileri okur" time="2.564">
         <system-out>
-            <![CDATA[Given kullanici HMC veri tabanina baglanir..................................passed
-And kullanici "tHOTELROOM" tablosundaki "Price" verilerini alir.............passed
-And kullanici "Price" sutunundaki verileri okur.............................passed
+            <![CDATA[Given kullanici DBUtilis ile HMC veri tabanina baglanir.....................passed
+And kullanici DBUtilis ile "tHOTELROOM" tablosundaki "Price" verilerini alir.passed
+And kullanici DBUtilis ile "Price" sutunundaki verileri okur................passed
 ]]>
         </system-out>
     </testcase>
